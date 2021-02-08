@@ -1,0 +1,19 @@
+<div class="col-12 last-tickers-content">
+    <table class="col-12 table table-striped">
+        <thead>
+            <tr>
+            <!-- (sort)="onSort($event)" -->
+              <th scope="col" sortable="name">Par</th>
+              <th scope="col" sortable="area">Último preço</th>
+              <th scope="col" sortable="population">Variação</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of data">
+            <td>{{ item.symbol }}</td>
+            <td>{{ tratarMoeda(item.lastPrice) }}</td>
+            <td>{{ item.bid }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

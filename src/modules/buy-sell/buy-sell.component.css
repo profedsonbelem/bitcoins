@@ -1,0 +1,86 @@
+.buy-sell-container {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: auto;
+}
+
+.buy-sell-content {
+    display: flex;
+    flex-direction: row;
+    /* color: #ffffff;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: auto; */
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.buy-sell-control {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-controls-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-padrao {
+    border-radius: 10px;
+    height: 50px!important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-padrao-span {
+    font-weight: 900;
+    font-size: 35px;
+    margin-top: -7px;
+}
+
+.div-preco {
+    margin-top: 10px;
+}
+
+.div-qtd {
+    margin-top: 10px;
+}
+
+.default-btn-control {
+    background-color: #2d2d2d;
+    border-color: #615f5f;
+}
+
+.btn-success {
+    height: 55px;
+    border-radius: 10px;
+}
+
+.span-success {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.slider-range {
+    width: 290px;
+}

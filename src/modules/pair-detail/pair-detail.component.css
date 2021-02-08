@@ -1,0 +1,30 @@
+.pair-detail-content {
+    color: #ffffff;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.pair-title {
+    font-size: 1.5em;
+    color: #909090;
+}
+
+.pair-detail-header {
+    font-size: 0.9em;
+    color: #909090;
+}
+
+.pair-detail-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.default-info {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.bid-value-info {
+    display: flex;
+    align-items: center;
+}

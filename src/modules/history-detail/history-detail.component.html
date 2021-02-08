@@ -1,0 +1,59 @@
+<div class="col-12 history-detail-content">
+    <div>Livro de Ofertas</div>
+    <div class="colum">
+        <table class="col-12 table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" sortable="name">Preço(BRL)</th>
+                    <th scope="col" sortable="area">Quantidade(BTC)</th>
+                    <!-- <th scope="col" sortable="population">Total(BTC)</th> -->
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of listaAsk">
+                <td class="span-ask">{{ tratarMoeda(item[0]) }}</td>
+                <td>{{ item[1] }}</td>
+                <!-- <td>{{ item.amount }}</td> -->
+            </tr>
+            </tbody>
+        </table>
+        <hr />
+        <table class="col-12 table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" sortable="name">Preço(BRL)</th>
+                    <th scope="col" sortable="area">Quantidade(BTC)</th>
+                    <!-- <th scope="col" sortable="population">Total(BTC)</th> -->
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of listaBid">
+                <td class="span-bid">{{ tratarMoeda(item[0]) }}</td>
+                <td>{{ item[1] }}</td>
+                <!-- <td>{{ item.amount }}</td> -->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- <div class="col-12 history-detail-content">
+    <div>Negociações Recentes</div>
+    <div class="colum">
+        <table *ngIf="negociacoesRecentes" class="col-12 table table-striped">
+            <thead>
+                <tr>
+                  <th scope="col" sortable="name">Tempo</th>
+                  <th scope="col" sortable="area">Preço</th>
+                  <th scope="col" sortable="population">Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of negociacoesRecentes">
+                <td>{{ getGate(item.timestamp) }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.amount }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->

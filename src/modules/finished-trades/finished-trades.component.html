@@ -1,0 +1,41 @@
+<div class="col-12 user-trade-content">
+    <div class="col-12 user-trade-body" *ngFor="let trade of finishedTradesArray">
+        <div class="col-12 trade-content">
+            <div class="col-2 trade-cell">
+                <div>Tempo</div>
+                <td>{{ handleTempo(trade.timestamp) }}</td>
+            </div>
+            <div class="col-2 trade-cell">
+                <div>Par</div>
+                <td>{{ handleTipo(trade.side) }} - {{ trade.symbol }}</td>
+            </div>
+            <div class="col-2 trade-cell">
+                <div>Preço</div>
+                <td>R$ {{ handlePreco(trade.price) }}</td>
+            </div>
+            <div class="col-2 trade-cell">
+                <div>Quantidade</div>
+                <td>{{ trade.amount }}</td>
+            </div>
+            <div class="col-2 trade-cell">
+                <div>Executado</div>
+                <td>{{ trade.filledValue }}</td>
+            </div>
+            <div class="col-2 trade-cell">
+                <div>Total</div>
+                <td>{{ trade.value }}</td>
+            </div>
+        </div>
+        <div class="col-12 trade-bottom">
+            <div class="col-6 trade-cell">
+                <td>{{ trade.status }}</td>
+            </div>
+            <div class="col-6 btn-cancelar">
+                <button type="button" class="btn btn-link" (click)="handleCancelOrder(trade.id)">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="finishedTradesArray && finishedTradesArray.length === 0" class="empty-history-order">
+        Não foram encontradas ordens finalizadas.
+    </div>
+</div>

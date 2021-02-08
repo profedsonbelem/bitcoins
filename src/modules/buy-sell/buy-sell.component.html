@@ -1,0 +1,142 @@
+<form class="col-12 buy-sell-container" [formGroup]="buySellForm" (ngSubmit)="onSubmit(buySellForm.value)">
+    <mat-tab-group>
+        <mat-tab label="Mercado">
+            <div class="col-12 buy-sell-content">
+                <div class="col-6 content-left">
+                    <div class="div-preco">
+                        <span>Preço de Compra</span>
+                        <div class="form-group default-component">
+                            <input id="precoCompra" type="text"  formControlName="precoCompra" class="form-control form-text-box" placeholder="Preço Compra">
+                        </div>
+                    </div>
+                    <div class="div-range-value">
+                        <!-- <mat-form-field class="example-margin">
+                            <mat-label>Valor</mat-label>
+                            <input matInput type="number" id="rangeValue" formControlName="rangeValue">
+                        </mat-form-field> -->
+                        <span>Range de Compra</span><span>{{ mercadoCompraRangeValue }}</span>
+                        <div class="form-group default-component">
+                            <input id="rangeCompra" type="text"  formControlName="mercadoCompraRangeValue" class="form-control form-text-box" placeholder="Range Compra">
+                        </div>
+                        <mat-slider
+                            class="example-margin slider-range"
+                            [disabled]="disabled"
+                            [invert]="invert"
+                            [max]="max"
+                            [min]="min"
+                            [step]="step"
+                            [thumbLabel]="thumbLabel"
+                            [tickInterval]="getSliderTickInterval()"
+                            [(ngModel)]="mercadoCompraRangeValue"
+                            [vertical]="vertical">
+                        </mat-slider>
+                    </div>
+                    <div class="btn-controls-content">
+                        <button type="button" class="btn btn-danger col-5 btn-padrao"><span class="btn-padrao-span">-</span></button>
+                        <button type="button" class="btn btn-success col-5 btn-padrao"><span class="btn-padrao-span">+</span></button>
+                    </div>
+                    <div class="div-qtd">
+                        <span>Quantidade BTC</span>
+                        <div class="form-group default-component">
+                            <input id="qtdCompra" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" formControlName="qtdCompra" class="form-control form-text-box" placeholder="Quantidade Compra">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 content-right">
+                    <div class="div-preco">
+                        <span>Preço de Venda</span>
+                        <div class="form-group default-component">
+                            <input id="precoVenda" type="text" formControlName="precoVenda" class="form-control form-text-box" placeholder="Preço Venda">
+                        </div>
+                    </div>
+                    <div class="div-range-value">
+                        <span>Range de Venda</span><span>{{ mercadoVendaRangeValue }}</span>
+                        <div class="form-group default-component">
+                            <input id="rangeVenda" type="text" formControlName="rangeVenda" class="form-control form-text-box" placeholder="Range Venda">
+                        </div>
+                        <mat-slider
+                            class="example-margin slider-range"
+                            [disabled]="disabled"
+                            [invert]="invert"
+                            [max]="max"
+                            [min]="min"
+                            [step]="step"
+                            [thumbLabel]="thumbLabel"
+                            [tickInterval]="getSliderTickInterval()"
+                            [(ngModel)]="mercadoVendaRangeValue"
+                            [vertical]="vertical">
+                        </mat-slider>
+                    </div>
+                    <div class="btn-controls-content">
+                        <button type="button" class="btn btn-danger col-5 btn-padrao"><span class="btn-padrao-span">-</span></button>
+                        <button type="button" class="btn btn-success col-5 btn-padrao"><span class="btn-padrao-span">+</span></button>
+                    </div>
+                    <div class="div-qtd">
+                        <span>Quantidade BTC</span>
+                        <div class="form-group default-component">
+                            <input id="qtdVenda" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" formControlName="qtdVenda" class="form-control form-text-box" placeholder="Quantidade Venda">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Limitadas">
+            <div class="col-12 buy-sell-content">
+                <div class="col-6 content-left">
+                    <div class="div-preco">
+                        <span>Preço de Compra</span>
+                        <div class="form-group default-component">
+                            <input id="precoCompra" type="text"  formControlName="precoCompra" class="form-control form-text-box" placeholder="Preço Compra">
+                        </div>
+                    </div>
+                    <div class="div-range-value">
+                        <span>Range de compra</span>
+                        <div class="form-group default-component">
+                            <input id="rangeCompra" type="text"  formControlName="rangeCompra" class="form-control form-text-box" placeholder="Range Compra">
+                        </div>
+                    </div>
+                    <div class="btn-controls-content">
+                        <button type="button" class="btn btn-danger col-5 btn-padrao"><span class="btn-padrao-span">-</span></button>
+                        <button type="button" class="btn btn-success col-5 btn-padrao"><span class="btn-padrao-span">+</span></button>
+                    </div>
+                    <div class="div-qtd">
+                        <span>Quantidade BTC</span>
+                        <div class="form-group default-component">
+                            <input id="qtdCompra" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" formControlName="qtdCompra" class="form-control form-text-box" placeholder="Quantidade Compra">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 content-right">
+                    <div class="div-preco">
+                        <span>Preço de Venda</span>
+                        <div class="form-group default-component">
+                            <input id="precoVenda" type="text" formControlName="precoVenda" class="form-control form-text-box" placeholder="Preço Venda">
+                        </div>
+                    </div>
+                    <div class="div-range-value">
+                        <span>Range de compra</span>
+                        <div class="form-group default-component">
+                            <input id="rangeCompra" type="text"  formControlName="rangeCompra" class="form-control form-text-box" placeholder="Range Compra">
+                        </div>
+                    </div>
+                    <div class="btn-controls-content">
+                        <button type="button" class="btn btn-danger col-5 btn-padrao"><span class="btn-padrao-span">-</span></button>
+                        <button type="button" class="btn btn-success col-5 btn-padrao"><span class="btn-padrao-span">+</span></button>
+                    </div>
+                    <div class="div-qtd">
+                        <span>Quantidade BTC</span>
+                        <div class="form-group default-component">
+                            <input id="qtdVenda" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" formControlName="qtdVenda" class="form-control form-text-box" placeholder="Quantidade Venda">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+    
+    <div class="col-12 buy-sell-control">
+        <button type="submit" class="col-6 btn btn-success">
+            <span class="span-success">INICIAR</span>
+        </button>
+    </div>
+</form>

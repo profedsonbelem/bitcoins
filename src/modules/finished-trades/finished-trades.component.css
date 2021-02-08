@@ -1,0 +1,40 @@
+.user-trade-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 10px;
+}
+
+.user-trade-body {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.trade-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.trade-bottom {
+    /* width: 20px; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.btn-cancelar {
+    text-align: right;
+}
+
+.empty-history-order {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    font-size: larger;
+}

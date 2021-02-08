@@ -1,0 +1,43 @@
+.div-header-modal {
+    margin-left: 20%;
+    margin-top: -85px;
+    border: 0;
+}
+
+.div-body-modal {
+    text-align: center;
+    margin-top: -15px;
+}
+
+.div-footer-modal {
+    border: 0;
+    justify-content: center;
+}
+
+.div-success-circle {
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+
+.modal-icon {
+    width: 150px;
+}
+
+.btn-compartilhar-modal {
+    background-color: #4064ac;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+.compartilhar-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.span-compartilhar {
+    margin-left: 3px;
+}

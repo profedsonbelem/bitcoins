@@ -1,0 +1,12 @@
+<div class="modal-header div-header-modal">
+    <!-- <img *ngIf="!storeService.modalBuscarNumeroError" class="modal-icon" src="./assets/img/icon/SuccessIcon2.png">
+    <img *ngIf="storeService.modalBuscarNumeroError" class="modal-icon" src="./assets/img/icon/ErrorIcon.png"> -->
+    <img *ngIf="modalStatus" class="modal-icon" src="../../assets/img/icon/SuccessIcon2.png">
+    <img *ngIf="!modalStatus" class="modal-icon" src="../../assets/img/icon/ErrorIcon.png">
+</div>
+<div class="modal-body div-body-modal">
+    <span>{{ modalMessage }}</span>
+</div>
+<div class="modal-footer div-footer-modal">
+    <button type="button" class="btn btn-danger" (click)="bsModalRef.hide()">FECHAR</button>
+</div>
